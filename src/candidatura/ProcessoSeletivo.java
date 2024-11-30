@@ -7,23 +7,23 @@ public class ProcessoSeletivo {
         String[] candidatos = {"Felipe", "Marcia", "Julia", "Paulo", "Augusto"};
         for (String candidato : candidatos) {
             entrandoEmContato(candidato);
-        } // Fechamento correto do bloco for
+        } 
     }
 
     static void entrandoEmContato(String candidato) {
         int tentativasRealizadas = 1;
         boolean continuaTentando = true;
-        boolean atendeu = false; // Corrigido o nome da variável para atendeu
+        boolean atendeu = false; 
 
         do {
-            atendeu = atender(); // Corrigido: atendeu = atender()
+            atendeu = atender(); 
             continuaTentando = !atendeu;
             if (continuaTentando) {
                 tentativasRealizadas++;
             } else {
                 System.out.println("Contato realizado com sucesso");
             }
-        } while (continuaTentando && tentativasRealizadas < 3); // Corrigido o ponto e vírgula
+        } while (continuaTentando && tentativasRealizadas < 3); 
 
         if (atendeu) {
             System.out.println("Conseguimos contato com " + candidato + " na " + tentativasRealizadas + "ª tentativa.");
